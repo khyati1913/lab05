@@ -1,0 +1,27 @@
+// WAP to read a list of integerst and store in a single dimensional array.Also count and display postive , negative ,odd and even numbers in a array
+#include<stdio.h>
+int main(){
+    int n,i,pos=0,neg=0,odd=0,even=0;
+    printf("enter the number of elements:");
+    scanf("%d\n",&n);
+    int arr[n];
+    for( int i=0 ;i<n;i++){
+        scanf("%d",&arr[i]);
+        if(arr[i]>0){
+            pos++;
+        }
+        else{
+            neg++;
+        }
+        if(arr[i]%2==0){
+            even++;
+        }
+        else{
+            odd++;
+        }
+    }
+    printf("total positive integers:%d\n",pos);
+    printf("total negative integers:%d\n",neg);
+    printf("total even integers:%d\n",even);
+    printf("total odd integers:%d\n",odd);
+}
